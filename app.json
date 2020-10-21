@@ -27,13 +27,6 @@
       "favicon": "./assets/images/favicon.png",
       "config": {
         "firebase": {
-          "apiKey": "AIzaSyAfYdVRmxCx5VAwCpa2SBTYpgXSrv1sn7Q",
-          "authDomain": "expo-fb-base.firebaseapp.com",
-          "databaseURL": "https://expo-fb-base.firebaseio.com",
-          "projectId": "expo-fb-base",
-          "storageBucket": "expo-fb-base.appspot.com",
-          "messagingSenderId": "666675166808",
-          "appId": "1:666675166808:web:4f62de2ed7a123e537d42d",
           "measurementId": "G-37TD38K8CB"
         }
       }
