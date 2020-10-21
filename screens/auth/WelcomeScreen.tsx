@@ -3,7 +3,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 interface Props {}
 
-const WelcomeScreen: React.FC<Props> = ({ navigation }) => {
+const WelcomeScreen: React.FC<Props> = ({ navigation }: any) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome</Text>
