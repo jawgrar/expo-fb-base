@@ -9,5 +9,8 @@ npm-debug.*
 *.orig.*
 web-build/
 
+# config
+config/local.ts
+
 # macOS
 .DS_Store

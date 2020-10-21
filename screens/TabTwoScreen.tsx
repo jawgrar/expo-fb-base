@@ -1,15 +1,22 @@
-import * as React from 'react';
-import { StyleSheet } from 'react-native';
-
-import EditScreenInfo from '../components/EditScreenInfo';
-import { Text, View } from '../components/Themed';
+import React from "react";
+import { StyleSheet, TouchableOpacity } from "react-native";
+import { Text, View } from "../components/Themed";
+import { logout } from "../firebase/firebaseProvider";
 
 export default function TabTwoScreen() {
+  const handleLogout = async () => {
+    try {
+      await logout();
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabTwoScreen.js" />
+      <TouchableOpacity onPress={handleLogout}>
+        <Text>logout</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -17,16 +24,7 @@ export default function TabTwoScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
